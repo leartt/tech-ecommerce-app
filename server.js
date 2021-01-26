@@ -8,6 +8,7 @@ const app = express();
 
 //middlewares
 app.use(express.json());
+app.use(express.urlencoded({extended: true}));
 app.use('/uploads', express.static(path.join(__dirname, '/uploads')))
 
 
@@ -19,6 +20,9 @@ require('./database/mongoDB');
 app.use('/api/users', require('./routes/api/users'));
 
 
+app.use('/api/products', require('./routes/api/products'));
+
+
 // Error handler middleware
 app.use((err, req, res, next) => {
     if (!err.statusCode) {
@@ -27,6 +31,6 @@ app.use((err, req, res, next) => {
     return res.status(err.statusCode).json({ message: err.message, stack: err.stack })
 })
 
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 5500;
 
 app.listen(PORT, () => console.log(`Server is running on PORT: ${PORT}`))
