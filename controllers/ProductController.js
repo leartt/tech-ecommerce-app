@@ -22,6 +22,16 @@ exports.getProduct = async (req, res, next) => {
     }
 }
 
+exports.getLatestProducts = async (req, res, next) => {
+    try {
+        const latestProducts = await Product.find().sort({ releaseDate: -1 }).limit(3)
+        return res.status(200).json({ latestProducts, success: true })
+    } catch (error) {
+        next(error)
+    }
+}
+
+
 exports.addProduct = [uploader.array('images'), async (req, res, next) => {
     try {
         const { short_name, long_name, description, price, releaseDate, category } = req.body;

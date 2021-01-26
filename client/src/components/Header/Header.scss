@@ -1,6 +1,43 @@
 .Header {
     height: 10vh;
-    width: 100vw;
-    background: red;
-    color: black;
+
+    &__navbar {
+        height: inherit;
+
+        &-brand {
+            color: white;
+            font-weight: 800;
+            font-size: 1.7em;
+
+            &:hover {
+                color: rgb(5, 140, 144);
+                text-decoration: none;
+            }
+        }
+    }
+
+    .navbar__menu {
+        margin-left: auto;
+
+        &-links {
+            color: white;
+            text-decoration: none;
+
+            &:not(:last-child) {
+                margin-right: 1.6em;
+            }
+
+            &:hover {
+                color: rgb(5, 140, 144);
+            }
+
+            .icon {
+                font-size: 1.3em;
+            }
+        }
+
+        &-links.active {
+            color: rgb(5, 140, 144);
+        }
+    }
 }

@@ -1,10 +1,11 @@
 import React from 'react'
+import './Footer.scss';
 
 const Footer = () => {
     return (
-        <div>
-            Footer
-        </div>
+        <footer className="Footer">
+            <p>iSHOP &copy; {new Date().getFullYear()}</p>
+        </footer>
     )
 }
 
