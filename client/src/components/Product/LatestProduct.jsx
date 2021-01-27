@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react'
 import { getLatestProducts } from '../../redux/actions/productActions'
 import ProductCard from './ProductCard'
 import { Row } from 'react-bootstrap'
+import './Product.scss';
 
 const LatestProduct = () => {
 
@@ -11,11 +12,14 @@ const LatestProduct = () => {
 
 
     useEffect(() => {
-        dispatch(getLatestProducts());
+        if (!latestProducts) {
+            dispatch(getLatestProducts());
+        }
     }, [])
 
     return (
-        <div>
+        <div className="LatestProduct">
+            <h1 className="LatestProduct__title">Latest Products</h1>
             <Row>
                 {latestProducts?.map(product => (
                     <ProductCard key={product._id} product={product} />

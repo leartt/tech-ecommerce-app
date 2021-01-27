@@ -1,5 +1,5 @@
 
-import { MdShoppingCart, MdAccountCircle } from 'react-icons/md'
+import { MdAccountCircle } from 'react-icons/md'
 
 export const routes = [
     {
@@ -8,14 +8,10 @@ export const routes = [
     },
     {
         name: "Shop",
-        path: "/shop", 
+        path: "/shop",
     },
     {
         name: <MdAccountCircle />,
         path: "/my-profile",
-    },
-    {
-        name: <MdShoppingCart />,
-        path: "/cart",
     },
 ]

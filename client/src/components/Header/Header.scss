@@ -1,43 +1,65 @@
 .Header {
-    height: 10vh;
+  height: 10vh;
 
-    &__navbar {
-        height: inherit;
+  &__navbar {
+    height: inherit;
 
-        &-brand {
-            color: white;
-            font-weight: 800;
-            font-size: 1.7em;
+    &-brand {
+      color: white;
+      font-weight: 800;
+      font-size: 1.7em;
 
-            &:hover {
-                color: rgb(5, 140, 144);
-                text-decoration: none;
-            }
+      &:hover {
+        color: rgb(5, 140, 144);
+        text-decoration: none;
+      }
+    }
+  }
+
+  .navbar__menu {
+    margin-left: auto;
+
+    &-links {
+      color: white;
+      text-decoration: none;
+
+      &:not(:last-child) {
+        margin-right: 1.6em;
+      }
+
+      &:hover {
+        color: rgb(5, 140, 144);
+      }
+
+      .icon {
+        font-size: 1.3em;
+      }
+
+      .cart-icon-wrapper {
+        position: relative;
+
+        .cart-icon {
+          font-size: 1.3em;
         }
+
+        .cart-total {
+          position: absolute;
+          background-color: white;
+          color: rgb(5, 140, 144);
+          border-radius: 50%;
+          height: 20px;
+          width: 20px;
+          text-align: center;
+          top: -7px;
+          right: -7px;
+          font-size: 0.9em;
+          font-weight: 600;
+        }
+      }
     }
 
-    .navbar__menu {
-        margin-left: auto;
-
-        &-links {
-            color: white;
-            text-decoration: none;
-
-            &:not(:last-child) {
-                margin-right: 1.6em;
-            }
-
-            &:hover {
-                color: rgb(5, 140, 144);
-            }
-
-            .icon {
-                font-size: 1.3em;
-            }
-        }
-
-        &-links.active {
-            color: rgb(5, 140, 144);
-        }
+    &-links.active {
+      color: rgb(5, 140, 144);
     }
+  }
 }

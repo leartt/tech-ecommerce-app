@@ -9,7 +9,7 @@ const app = express();
 
 //middlewares
 app.use(express.json());
-app.use(express.urlencoded({extended: true}));
+app.use(express.urlencoded({ extended: true }));
 app.use(cors());
 app.use('/uploads', express.static(path.join(__dirname, '/uploads')))
 
@@ -21,6 +21,7 @@ require('./database/mongoDB');
 // API endpoints
 app.use('/api/users', require('./routes/api/users'));
 app.use('/api/products', require('./routes/api/products'));
+app.use('/api/orders', require('./routes/api/orders'));
 
 
 // Error handler middleware
