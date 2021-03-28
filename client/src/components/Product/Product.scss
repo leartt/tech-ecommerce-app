@@ -1,6 +1,14 @@
 .Product {
 }
 
+.Products {
+  padding: 50px 0;
+
+  &__createBtn {
+    margin: 10px 0;
+  }
+}
+
 .LatestProduct {
   min-height: 90vh;
 
@@ -21,5 +29,82 @@
   &__price {
     padding-top: 15px;
     font-weight: 800;
+  }
+  &__bottomButtons {
+    display: flex;
+    .view-btn {
+      flex: 2;
+      margin-right: 2px;
+    }
+  }
+}
+
+.SingleProduct {
+  &__row {
+    padding: 100px 0;
+  }
+
+  &__images {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 40px;
+  }
+
+  &__details {
+    &-title {
+      padding-top: 30px;
+      padding-bottom: 10px;
+    }
+
+    &-listGroup {
+      display: flex;
+      flex-direction: column;
+
+      .item-wrapper {
+        padding: 2px 0;
+        .item {
+          font-size: 1em;
+          font-weight: 400;
+
+          &.price {
+            font-size: 1.5em;
+            color: #058c90;
+            font-weight: 800;
+            padding-top: 15px;
+            span {
+              color: black;
+              font-weight: 400;
+            }
+          }
+
+          span {
+            font-weight: 800;
+          }
+        }
+      }
+      .addToCart-btn {
+        margin-top: 15px;
+      }
+    }
+  }
+}
+
+.ProductsTable {
+  tbody {
+    img {
+      width: 50px;
+      height: 50px;
+      object-fit: cover;
+    }
+  }
+}
+
+.ProductForm {
+  &__heading {
+    margin: 20px 0;
+    background-color: rgb(237, 237, 237);
+    border-radius: 3px;
+    padding: 10px;
   }
 }

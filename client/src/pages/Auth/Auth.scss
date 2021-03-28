@@ -1,0 +1,21 @@
+.Login,
+.Signup {
+  min-height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 30px 0;
+
+  &__form {
+    box-shadow: 0 0 90px -60px black;
+    padding: 30px;
+    border-radius: 15px;
+  }
+
+  &__title {
+    padding: 10px 0;
+    margin-bottom: 30px;
+  }
+}

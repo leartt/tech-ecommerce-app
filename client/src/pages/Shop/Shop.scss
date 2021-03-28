@@ -1,0 +1,12 @@
+.Shop {
+  &__filters {
+    padding: 50px 0;
+    display: flex;
+    flex: 1;
+
+    .Search {
+      flex-grow: 2;
+      margin: 0 5px;
+    }
+  }
+}

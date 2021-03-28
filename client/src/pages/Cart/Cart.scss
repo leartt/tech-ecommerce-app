@@ -1,0 +1,80 @@
+.Cart {
+  background-color: rgb(246, 246, 246);
+  &__item {
+    margin: 15px 0;
+    padding: 15px 30px;
+    width: 100%;
+    display: flex;
+    border-radius: 10px;
+    box-shadow: 1px 1px 15px -12px gray;
+    background-color: white;
+
+    &-image {
+      width: 150px;
+      height: 150px;
+      object-fit: contain;
+      margin-right: 15px;
+    }
+
+    &-name {
+      font-weight: 600;
+    }
+
+    &-price {
+    }
+  }
+
+  &__checkout {
+    border: 1px solid rgb(187, 187, 187);
+    border-radius: 5px;
+    background-color: rgb(255, 255, 255);
+    margin-top: 30px;
+    padding: 20px 10px;
+    p {
+      font-weight: 600;
+    }
+  }
+}
+
+.CartSummary {
+  border: 1px solid rgb(240, 240, 240);
+  border-radius: 5px;
+  padding: 10px;
+  &__heading {
+    display: flex;
+    align-items: center;
+  }
+  .cartItem {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid rgb(218, 218, 218);
+    padding: 10px 0;
+
+    > div {
+      display: flex;
+      align-items: center;
+    }
+
+    .image {
+      width: 30px;
+      height: 30px;
+      object-fit: cover;
+      margin-right: 15px;
+    }
+
+    h5 {
+      margin: 0;
+      font-size: 1.1em;
+    }
+  }
+
+  &__subtotal {
+    padding-top: 10px;
+    text-align: right;
+    span {
+      font-weight: 800;
+      font-size: 1.5em;
+    }
+  }
+}
